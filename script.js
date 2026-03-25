@@ -57,3 +57,42 @@ const preview = document.getElementById("preview");
 input.addEventListener("input", function (event) {
   preview.innerText = event.target.value;
 });
+
+// Task (5)
+
+const toggleBtn = document.getElementById("toggle-btn");
+const section = document.getElementById("toggle-section");
+
+toggleBtn.addEventListener("click", function () {
+  section.classList.toggle("hidden");
+});
+
+// Task (6) 
+
+const increaseBtn = document.getElementById("increase-btn");
+const decreaseBtn = document.getElementById("decrease-btn");
+const counterValue = document.getElementById("counter-value");
+
+let count = 0;
+
+function updateCounter() {
+  counterValue.innerText = count;
+
+  if (count > 0) {
+    counterValue.style.color = "green";
+  } else if (count < 0) {
+    counterValue.style.color = "red";
+  } else {
+    counterValue.style.color = "black";
+  }
+}
+
+increaseBtn.addEventListener("click", function () {
+  count++;
+  updateCounter();
+});
+
+decreaseBtn.addEventListener("click", function () {
+  count--;
+  updateCounter();
+});
