@@ -4,3 +4,32 @@
   color: white;
   font-size: 20px;
 }
+
+.color-card {
+  padding: 20px;
+  border: 1px solid black;
+  display: inline-block;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.color-card.active {
+  background-color: purple;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+#counter-app {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
+
+#counter-value {
+  min-width: 40px;
+  text-align: center;
+}
